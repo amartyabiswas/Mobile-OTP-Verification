@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 // Connecting to the local database
-mongoose.connect('mongodb://localhost/genes');
+mongoose.connect('MONGODB_URI');
 
 //Set view engine
 app.set('view engine', 'ejs');
