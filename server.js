@@ -34,6 +34,3 @@ app.use(flash());
 app.listen(process.env.PORT|| 4000, function () {
    console.log('Magic happens at port '+ 4000);
 });
-
-module.exports=app;
-
