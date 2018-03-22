@@ -110,7 +110,7 @@ UserSchema.methods.sendMessage = function(message, successCallback, errorCallbac
 
         twilioClient.messages.create({
             to: toNumber,
-            from: '+12566335877',
+            from: 'YOUR_TWILIO_NUMBER',
             body: message,
         }).then(function() {
             successCallback();
