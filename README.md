@@ -1,10 +1,19 @@
 # Mobile-OTP-Verification
-Verifies the mobile number entered by the user during signup through otp.
 
-#### My Mobile verification system is powered by Twilio. Twilio's npm package is available for Node.js app, which can be utilized for sending messages and voice calls.
+#### My Mobile verification system is powered by Twilio. Twilio's npm package is available for Node.js app,which can be utilized for sending messages and voice calls.
 
 ### Features of Twilio account:
-  - Free account generates a Twilio number which can send messages and voice calls only to verified numbers.
+1) Free account generates a Twilio number which can send messages and voice calls only to the numbers that have been verified by Twilio.
+2) If you want to send message to any random number, then you need to purchase a premium Twilio number.
+3) Associate your twilio account with [Authy](https://dashboard.authy.com/signin).
+4) Authy is a 2way authentication method, whose packages are available for Node app.
+
+### Features of Authy:
+1) Authy sends OTP in the requested number, using Twilio messeges.
+2) Waits for the user to send the OTP back to the server for verification, and sets time limit at the same time.
+3) If the message dies, then there is option for Resend.
+4) Else the account is verified and the user is stored in the database as verified user.
+  
 ![screenshot 145](https://user-images.githubusercontent.com/31181068/37790289-1a402b5e-2e2c-11e8-841b-101a8e0d5ef9.png)
 ![screenshot 146](https://user-images.githubusercontent.com/31181068/37790298-1e8642fc-2e2c-11e8-806d-8482a2db4626.png)
 ![screenshot 147](https://user-images.githubusercontent.com/31181068/37790305-224667d2-2e2c-11e8-8b4d-89d8a014425d.png)
