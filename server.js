@@ -5,9 +5,10 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const mongoose = require('mongoose');
 const path = require('path');
+require('dotenv').config();
 
 // Connecting to the local database
-mongoose.connect('MONGODB_URI');
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true});
 
 //Set view engine
 app.set('view engine', 'ejs');
@@ -23,7 +24,7 @@ app.use('/', index);
 
 // Use of express session
 app.use(session({
-    secret: 'The cat is gone',
+    secret: 'The cat maynot be alive too',
     resave: true,
     saveUninitialized: true,
 }));

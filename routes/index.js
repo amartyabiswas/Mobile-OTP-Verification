@@ -115,10 +115,10 @@ router.post('/users/:id/verify', function (request, response) {
         // Send confirmation text message
         const message = 'You did it! Signup complete :)';
         user.sendMessage(message, function() {
-            // request.flash('successes', message);
+            request.flash('successes', message);
             response.redirect(`/users/${user._id}`);
         }, function(err) {
-            // request.flash('errors', 'You are signed up, but we could not send you a message. Our bad :(');
+            request.flash('errors', 'You are signed up, but we could not send you a message. Our bad :(');
         });
     }
     // respond with an error
