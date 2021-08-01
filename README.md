@@ -9,7 +9,7 @@
 4) Authy is a 2way authentication method, whose packages are available for Node app.
 
 ### Features of Authy:
-1) Authy sends OTP in the requested number, using Twilio messeges.
+1) Authy sends OTP in the requested number, using Twilio messages.
 2) Waits for the user to send the OTP back to the server for verification, and sets time limit at the same time.
 3) If the message dies, then there is option for Resend.
 4) Else the account is verified and the user is stored in the database as verified user.
